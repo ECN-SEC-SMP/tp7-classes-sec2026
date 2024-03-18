@@ -3,24 +3,45 @@
 
 using namespace std;
 
-point::point()
-{
-    this->x = 0; // initialisation à l'origine
-    this->y = 0;
-}
+/*
+Constructeur par défaut
+*/ 
+point::point() : x(0), y(0) {}
 
-point::point(float _x, float _y)
-{
-    this->x = _x;
-    this->y = _y;
-}
+/*
+Constructeur avec 2 paramètres
+*/
+point::point(float _x, float _y) : x(_x), y(_y) {}
 
+/*
+Constructeur de recopie
+*/
+point::point(const point& pt) : x(pt.x), y(pt.y) {}
+
+/*
+Déplace un point en absisse et en ordonnée
+*/
 void point::translater(float _x, float _y)
 {
     this->x += _x; // déplacement en absisse
     this->y += _y; // déplacement en ordonnée
 }
 
+/*
+accesseurs
+*/
+float point::getX() {return this->x;}
+float point::getY() {return this->y;}
+
+/*
+mutateurs
+*/
+void point::setX(float val) {this->x = val;}
+void point::setY(float val) {this->y = val;}
+
+/*
+Méthode de débug
+*/
 void point::aff()
 {
     cout << "------ point -------" << endl;
