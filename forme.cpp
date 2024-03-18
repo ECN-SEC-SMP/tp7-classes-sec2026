@@ -1,8 +1,6 @@
 #include "forme.h"
 #include <iostream>
 
-using namespace std;
-
 forme::forme() : centre() {}
 
 /*

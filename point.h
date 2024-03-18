@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
 
+using namespace std;
+
 class point {
     public:
         // constructeurs
@@ -23,4 +25,4 @@ class point {
         float y;
 };
 
-std::ostream& operator<<(std::ostream& s, point const& p1);
+ostream& operator<<(ostream& s, point const& p1);

@@ -3,6 +3,8 @@
 #include "point.h"
 #include <iostream>
 
+using namespace std;
+
 class forme
 {
     public:
