@@ -23,4 +23,4 @@ class point {
         float y;
 };
 
-std::ostream& operator<<(std::ostream&, point const& p1);
+std::ostream& operator<<(std::ostream& s, point const& p1);
