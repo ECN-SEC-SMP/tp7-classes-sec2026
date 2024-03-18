@@ -30,8 +30,8 @@ void point::translater(float _x, float _y)
 /*
 accesseurs
 */
-float point::getX() {return this->x;}
-float point::getY() {return this->y;}
+float point::getX() const {return this->x;}
+float point::getY() const {return this->y;}
 
 /*
 mutateurs
@@ -40,12 +40,18 @@ void point::setX(float val) {this->x = val;}
 void point::setY(float val) {this->y = val;}
 
 /*
-Méthode de débug
+Opérateurs
 */
-void point::aff()
+
+ostream& operator<<(ostream& s, point const& p1)
 {
-    cout << "------ point -------" << endl;
-    cout << this->x << endl;
-    cout << this->y << endl;
+    s << "--- point ---" << endl << "x : " << p1.getX()<< endl << "y : " << p1.getY() << endl << endl;
+    return s;
+}
+
+void point::operator+=(point const& p1)
+{
+    x += p1.x;
+    y += p1.y;
 }
 
