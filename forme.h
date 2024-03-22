@@ -8,13 +8,20 @@ using namespace std;
 class forme
 {
     public:
+        // Constructeur
         forme();
+        // Méthodes publiques
         virtual float perimetre()=0;
         virtual float surface()=0;
-        //opérateur
+        // Opérateur
         void operator+=(point const& p1);
-        //accesseur
+        // Accesseur
         point getPoint() const;
+        string getType() const; 
+        // Mutateur
+        void setType(string const& type); 
+    protected:
+        string type; 
     private:
         point centre;
 };

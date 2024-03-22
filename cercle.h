@@ -1,6 +1,5 @@
 #pragma once
 #include "forme.h"
-#include "point.h"
 #include <iostream>
 
 using namespace std;
@@ -18,6 +17,7 @@ class cercle : public forme
         float getRayon() const;
     private:
         float rayon;
+        
 };
 
 // Opérateurs

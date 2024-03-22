@@ -5,11 +5,14 @@
 class rectangle : public forme
 {
     public:
+        //Constructeurs
         rectangle();
         rectangle(float l, float h);
+        rectangle(float l, float h, string type);
+        //Méthodes publiques
         float perimetre();
         float surface();
-        //accesseur
+        //Accesseurs
         float getLongueur() const;
         float getHauteur() const;
     protected:

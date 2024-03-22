@@ -1,12 +1,31 @@
 #include "forme.h"
-#include <iostream>
 
 forme::forme() : centre() {}
 
 /*
+Accesseurs
+*/
+point forme::getPoint() const
+{
+    return this->centre;
+}
+
+string forme::getType() const 
+{
+    return this->type;
+}
+
+/*
+Mutateur
+*/
+void forme::setType(std::string const& type) 
+{
+    this->type = type;
+}
+
+/*
 Opérateurs
 */
-
 void forme::operator+=(point const& p1)
 {
     this->centre += p1;
@@ -18,11 +37,5 @@ ostream& operator<<(ostream& s, forme const& f1)
     return s;
 }
 
-/*
-Accesseur
-*/
 
-point forme::getPoint() const
-{
-    return this->centre;
-}
+

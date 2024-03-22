@@ -5,9 +5,9 @@
 Construteurs
 */
 
-carre::carre() : rectangle () {}
+carre::carre() : rectangle (1, 1, "carré") {}
 
-carre::carre(float c) : rectangle(c,c) {}
+carre::carre(float c) : rectangle(c, c, "carré") {}
 
 ostream& operator<<(ostream& s, carre const& c1)
 {

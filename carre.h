@@ -8,7 +8,7 @@ class carre : public rectangle
 {
     public:
         carre();
-        carre(float c);        
+        carre(float c);
 };
 
 std::ostream& operator<<(std::ostream& s, carre const& c);

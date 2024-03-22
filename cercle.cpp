@@ -6,9 +6,15 @@
 /*
 Constructeurs
 */
-cercle::cercle() : rayon(0) {}
+cercle::cercle() : rayon(0) 
+{
+    this->setType("cercle");
+}
 
-cercle::cercle(float _rayon) : rayon(_rayon) {}
+cercle::cercle(float _rayon) : rayon(_rayon) 
+{
+    this->setType("cercle");
+}
 
 float cercle::perimetre()
 {

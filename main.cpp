@@ -1,25 +1,24 @@
+//g++ -o main point.cpp forme.cpp main.cpp rectangle.cpp carre.cpp cercle.cpp listeFormes.cpp
+
 #include <iostream>
-#include "point.h"
-#include "forme.h"
 #include "rectangle.h"
 #include "cercle.h"
 #include "carre.h"
+#include "listeFormes.h"
 
 using namespace std;
 
 int main ()
 {   
-    rectangle r1(5,9);
-    cout << r1;
-    cout << "Perimetre : " << r1.perimetre() << endl;
-    cout << "Surface : " << r1.surface() << endl;
-    cercle c1(10);
-    cout << c1;
-    cout << "Perimetre : " << c1.perimetre() << endl;
-    cout << "Surface : " << c1.surface() << endl;
-    carre car1(6);
-    cout << car1;
-    cout << "Perimetre : " << car1.perimetre() << endl;
-    cout << "Surface : " << car1.surface() << endl;
-    return 0;
+    listeFormes liste;
+    rectangle* r1 = new rectangle(5,9, "rectangle");
+    cercle* c1 = new cercle(6);
+    carre* car1 = new carre(10);
+    liste.ajout(r1);
+    cout << liste << endl << "-------------------" << endl;
+    liste.ajout(c1);
+    cout << liste << endl << "-------------------" << endl;
+    liste.ajout(car1);
+    cout << liste << endl << "-------------------" << endl;
+    liste.~listeFormes();
 }
